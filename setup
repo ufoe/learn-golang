@@ -1,0 +1,18 @@
+<h1>安装golang</h1>
+
+要写GO代码，首先要安装对应的环境
+Go有多种安装方式，你可以选择自己喜欢的。这里我们介绍三种最常见的安装方式：
+Go源码安装：这是一种标准的软件安装方式。对于经常使用Unix类系统的用户，尤其对于开发者来说，从源码安装可以自己定制。
+Go标准包安装：Go提供了方便的安装包，支持Windows、Linux、Mac等系统。这种方式适合快速安装，可根据自己的系统位数下载好相应的安装包，一路<span class="hljs-keyword">next</span>就可以轻松安装了。推荐这种方式
+第三方工具安装：目前有很多方便的第三方软件包工具，例如Ubuntu的apt-get、Mac的homebrew等。这种安装方式适合那些熟悉相应系统的用户
+
+这里只讲源码安装
+首先下载GO源码   下载地址：https:<span class="hljs-regexp">//golang</span>.org/dl/
+下载之后解压缩到<span class="hljs-variable">$HOME</span>目录，执行如下代码：
+cd go/src
+./all.bash
+运行all.bash后出现<span class="hljs-string">"ALL TESTS PASSED"</span>字样时才算安装成功。
+安装成功之后需要设置GOROOT与PATH环境变量
+export GOPATH=<span class="hljs-variable">$HOME</span>/gopath
+export PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$HOME</span>/go/bin:<span class="hljs-variable">$GOPATH</span>/bin
+路径根据你实际情况来，不要照搬照抄
